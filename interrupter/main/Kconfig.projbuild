@@ -1,0 +1,62 @@
+menu "SSTC Interrupter configuration"
+
+    menu "Manual Mode"
+        menu "Pulse Duration"
+            config INTERRUPT_PD_DEFAULT
+                int "Default (us)"
+                default 10
+                range 0 100
+            config INTERRUPT_PD_MAX
+                int "Maximum (us)"
+                default 100
+                range 1 100
+        endmenu
+        menu "Pulse Repetition Frequency"
+            config INTERRUPT_PRF_MIN
+                int "Minimum (us)"
+                default 0
+                range 0 20000
+            config INTERRUPT_PRF_DEFAULT
+                int "Default (us)"
+                default 1000
+                range 0 20000
+            config INTERRUPT_PRF_MAX
+                int "Maximum (us)"
+                default 20000
+                range 0 20000
+        endmenu
+    endmenu
+
+    menu "Hardware"
+        menu "Pinout"
+            config INTERRUPT_PIN_JACK
+                int "Audio jack input pin"
+                default 1
+            config INTERRUPT_PIN_JACK_SW
+                int "Audio jack switch pin"
+                default 8
+            config INTERRUPT_PIN_TRIGGER
+                int "Trigger button pin"
+                default 7
+            config INTERRUPT_PIN_RE_A
+                int "Rotary encoder A pin"
+                default 3
+            config INTERRUPT_PIN_RE_B
+                int "Rotary encoder B pin"
+                default 4
+            config INTERRUPT_PIN_RE_SWT
+                int "Rotary encoder switch pin"
+                default 44
+            config INTERRUPT_PIN_SDA
+                int "SDA pin"
+                default 5
+            config INTERRUPT_PIN_SCL
+                int "SCL pin"
+                default 6
+            config INTERRUPT_PIN_OUTPUT
+                int "Signal output pin"
+                default 9
+        endmenu
+    endmenu
+
+endmenu

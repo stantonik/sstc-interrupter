@@ -1,0 +1,5 @@
+managed_components/
+.DS_Store
+build/
+.cache/
+*.eez-project-ui-state
