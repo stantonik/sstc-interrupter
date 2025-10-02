@@ -3,3 +3,6 @@ managed_components/
 build/
 .cache/
 *.eez-project-ui-state
+*-backups/
+*.dsn
+fp-info-cache
